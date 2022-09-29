@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
 
+# TODO refactor globals for min and max values into data structure to iterate
+# TODO refactor break logic state into functions
+# TODO read food from file
+# TODO read food from URL
+# TODO command line interface for number of menus to produce
+
 import random
 import pprint
 
