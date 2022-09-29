@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-# TODO read food from file
 # TODO read food from URL
 # TODO command line interface for number of menus to produce
 
