@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# TODO refactor globals for min and max values into data structure to iterate
+# TODO use min_params['sodium']
 # TODO refactor break logic state into functions
 # TODO read food from file
 # TODO read food from URL
@@ -11,45 +11,57 @@ import pprint
 
 pp = pprint.PrettyPrinter(indent=4)
 
-min_pct = 0.90
+max_params = {}
+min_params = {}
+total = {}
 
-max_kcal = 2000
-min_kcal = max_kcal * min_pct
-total_kcal = 0
-max_carb = max_kcal * 0.5 / 4
-min_carb = max_carb *min_pct
-total_carb = 0
-max_fat = max_kcal * 0.3 / 9
-min_fat = max_fat * min_pct
-total_fat = 0
-max_protein = max_kcal * 0.2 / 4
-min_protein = max_protein * min_pct
-total_protein = 0
-max_sodium = 2000
-total_sodium = 0
+min_pct = 0.90
 count = 0
 
+
+def init_params():
+    max_params['kcal'] = 2000
+    max_params['carb'] = max_params['kcal'] * 0.5 / 4
+    max_params['fat'] = max_params['kcal'] * 0.3 / 9
+    max_params['protein'] = max_params['kcal'] * 0.2 / 4
+    max_params['sodium'] = 2000
+
+    min_params['kcal'] = 2000 * min_pct
+    min_params['carb'] = min_params['kcal'] * 0.5 / 4
+    min_params['fat'] = min_params['kcal'] * 0.3 / 9
+    min_params['protein'] = min_params['kcal'] * 0.2 / 4
+    min_params['sodium'] = 500
+
+    total['kcal'] = 0
+    total['carb'] = 0
+    total['fat'] = 0
+    total['protein'] = 0
+    total['sodium'] = 0
+
+
 food = {
-    'almond milk': { 'kcal': 30, 'carb': 1, 'fat': 2.5, 'protein': 1, 'sodium': 0, 'max_servings': 999 } ,
-    'honeycrisp apple': { 'kcal': 80, 'carb': 22, 'fat': 0, 'protein': 0, 'sodium': 0, 'max_servings': 999 } ,
-    'protein powder 0.5': { 'kcal': 60, 'carb': 2, 'fat': 1, 'protein': 12, 'sodium': 53, 'max_servings': 999 } ,
-    'salad with anlvr dressing': { 'kcal': 72, 'carb': 10, 'fat': 3, 'protein': 2, 'sodium': 73, 'max_servings': 2 },
-    'special k and almond milk': { 'kcal': 157, 'carb': 28, 'fat': 4, 'protein': 3, 'sodium': 356, 'max_servings': 999 },
-    'toast with hummus': { 'kcal': 150, 'carb': 19, 'fat': 6, 'protein': 7, 'sodium': 200, 'max_servings': 999 }, 
-    'tofurky chao mayo sandwich': { 'kcal': 389, 'carb': 39, 'fat': 17, 'protein': 28, 'sodium': 777, 'max_servings': 999 }, 
-    'yellow peach': { 'kcal': 60, 'carb': 15, 'fat': 0, 'protein': 1, 'sodium': 0, 'max_servings': 999 } ,
-    'yukon gold potato': { 'kcal': 110, 'carb': 52, 'fat': 0, 'protein': 6, 'sodium': 0, 'max_servings': 999 } ,
+    'almond milk': {'kcal': 30, 'carb': 1, 'fat': 2.5, 'protein': 1, 'sodium': 0, 'max_servings': 999},
+    'honeycrisp apple': {'kcal': 80, 'carb': 22, 'fat': 0, 'protein': 0, 'sodium': 0, 'max_servings': 999},
+    'protein powder 0.5': {'kcal': 60, 'carb': 2, 'fat': 1, 'protein': 12, 'sodium': 53, 'max_servings': 999},
+    'salad with anlvr dressing': {'kcal': 72, 'carb': 10, 'fat': 3, 'protein': 2, 'sodium': 73, 'max_servings': 2},
+    'special k and almond milk': {'kcal': 157, 'carb': 28, 'fat': 4, 'protein': 3, 'sodium': 356, 'max_servings': 999},
+    'toast with hummus': {'kcal': 150, 'carb': 19, 'fat': 6, 'protein': 7, 'sodium': 200, 'max_servings': 999},
+    'tofurky chao mayo sandwich': {'kcal': 389, 'carb': 39, 'fat': 17, 'protein': 28, 'sodium': 777, 'max_servings': 999},
+    'yellow peach': {'kcal': 60, 'carb': 15, 'fat': 0, 'protein': 1, 'sodium': 0, 'max_servings': 999},
+    'yukon gold potato': {'kcal': 110, 'carb': 52, 'fat': 0, 'protein': 6, 'sodium': 0, 'max_servings': 999},
 }
+
+init_params()
 
 while True:
     menu = {}
-    total_kcal = 0
-    total_carb = 0
-    total_fat = 0
-    total_protein = 0
-    total_sodium = 0
+    total['kcal'] = 0
+    total['carb'] = 0
+    total['fat'] = 0
+    total['protein'] = 0
+    total['sodium'] = 0
 
-    while total_kcal <= max_kcal and total_carb <= max_carb and total_fat <= max_fat and total_protein <= max_protein and total_sodium <= max_sodium:
+    while total['kcal'] <= max_params['kcal'] and total['carb'] <= max_params['kcal'] and total['fat'] <= max_params['fat'] and total['protein'] <= max_params['protein'] and total['sodium'] <= max_params['sodium']:
         k = random.choice(list(food.keys()))
         kcal = food[k]['kcal']
         carb = food[k]['carb']
@@ -62,32 +74,32 @@ while True:
             if menu[k] == max_servings:
                 continue
 
-        if total_kcal + kcal > max_kcal:
+        if total['kcal'] + kcal > max_params['kcal']:
             break
-        if total_carb + carb > max_carb:
+        if total['carb'] + carb > max_params['kcal']:
             break
-        if total_fat + fat > max_fat:
+        if total['fat'] + fat > max_params['fat']:
             break
-        if total_protein + protein > max_protein:
+        if total['protein'] + protein > max_params['protein']:
             break
-        if total_sodium + kcal > max_sodium:
+        if total['sodium'] + kcal > max_params['sodium']:
             break
-        
-        total_kcal = total_kcal + kcal
-        total_carb = total_carb + carb
-        total_fat = total_fat + fat
-        total_protein = total_protein + protein
-        total_sodium = total_sodium + sodium
+
+        total['kcal'] = total['kcal'] + kcal
+        total['carb'] = total['carb'] + carb
+        total['fat'] = total['fat'] + fat
+        total['protein'] = total['protein'] + protein
+        total['sodium'] = total['sodium'] + sodium
 
         if k in menu.keys():
             menu[k] = menu[k] + 1
         else:
             menu[k] = 1
 
-        if total_kcal >= min_kcal and total_carb >= min_carb and total_fat >= min_fat and total_protein >= min_protein and total_kcal <= max_kcal and total_carb <= max_carb and total_fat <= max_fat and total_protein <= max_protein and total_sodium <= max_sodium:
+        if total['kcal'] >= min_params['kcal'] and total['carb'] >= min_params['carb'] and total['fat'] >= min_params['fat'] and total['protein'] >= min_params['protein'] and total['kcal'] <= max_params['kcal'] and total['carb'] <= max_params['kcal'] and total['fat'] <= max_params['fat'] and total['protein'] <= max_params['protein'] and total['sodium'] <= max_params['sodium']:
             break
 
-    if total_kcal >= min_kcal and total_carb >= min_carb and total_fat >= min_fat and total_protein >= min_protein and total_kcal <= max_kcal and total_carb <= max_carb and total_fat <= max_fat and total_protein <= max_protein and total_sodium <= max_sodium:
+    if total['kcal'] >= min_params['kcal'] and total['carb'] >= min_params['carb'] and total['fat'] >= min_params['fat'] and total['protein'] >= min_params['protein'] and total['kcal'] <= max_params['kcal'] and total['carb'] <= max_params['kcal'] and total['fat'] <= max_params['fat'] and total['protein'] <= max_params['protein'] and total['sodium'] <= max_params['sodium']:
         break
 
     count = count + 1
@@ -95,8 +107,10 @@ while True:
 
 
 print(f"Menu: {count} runs")
-print("%-33s kcal %4d, carb %3d, fat %3d, protein %3d, sodium %4d" % ("Totals:", total_kcal, total_carb, total_fat, total_protein, total_sodium))
-print("%-33s kcal %4d, carb %3d, fat %3d, protein %3d, sodium %4d" % ("Maxs:", max_kcal, max_carb, max_fat, max_protein, max_sodium))
+print("%-33s kcal %4d, carb %3d, fat %3d, protein %3d, sodium %4d" %
+      ("Totals:", total['kcal'], total['carb'], total['fat'], total['protein'], total['sodium']))
+print("%-33s kcal %4d, carb %3d, fat %3d, protein %3d, sodium %4d" %
+      ("Maxs:", max_params['kcal'], max_params['kcal'], max_params['fat'], max_params['protein'], max_params['sodium']))
 print(88 * '-')
 for k in sorted(menu.keys()):
     servings = menu[k]
@@ -106,4 +120,5 @@ for k in sorted(menu.keys()):
     protein = food[k]['protein'] * servings
     sodium = food[k]['sodium'] * servings
     check_boxes = servings * "[ ]"
-    print("%dx %-30s kcal %4d, carb %3d, fat %3d, protein %3d, sodium %4d  %s" % (servings, k, kcal, carb, fat, protein, sodium, check_boxes))
+    print("%dx %-30s kcal %4d, carb %3d, fat %3d, protein %3d, sodium %4d  %s" %
+          (servings, k, kcal, carb, fat, protein, sodium, check_boxes))
