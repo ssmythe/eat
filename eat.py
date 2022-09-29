@@ -1,42 +1,10 @@
 #!/usr/bin/env python3
 
-# TODO use min_params['sodium']
-# TODO refactor break logic state into functions
 # TODO read food from file
 # TODO read food from URL
 # TODO command line interface for number of menus to produce
 
 import random
-import pprint
-
-pp = pprint.PrettyPrinter(indent=4)
-
-max_params = {}
-min_params = {}
-total = {}
-
-min_pct = 0.90
-count = 0
-
-
-def init_params():
-    max_params['kcal'] = 2000
-    max_params['carb'] = max_params['kcal'] * 0.5 / 4
-    max_params['fat'] = max_params['kcal'] * 0.3 / 9
-    max_params['protein'] = max_params['kcal'] * 0.2 / 4
-    max_params['sodium'] = 2000
-
-    min_params['kcal'] = 2000 * min_pct
-    min_params['carb'] = min_params['kcal'] * 0.5 / 4
-    min_params['fat'] = min_params['kcal'] * 0.3 / 9
-    min_params['protein'] = min_params['kcal'] * 0.2 / 4
-    min_params['sodium'] = 500
-
-    total['kcal'] = 0
-    total['carb'] = 0
-    total['fat'] = 0
-    total['protein'] = 0
-    total['sodium'] = 0
 
 
 food = {
@@ -51,17 +19,81 @@ food = {
     'yukon gold potato': {'kcal': 110, 'carb': 52, 'fat': 0, 'protein': 6, 'sodium': 0, 'max_servings': 999},
 }
 
-init_params()
+# tuneables
+min_pct = 0.90
+max_kcal = 2000
+min_sodium = 500
+max_sodium = 2000
 
-while True:
-    menu = {}
+# globals
+keys_params = ['kcal', 'carb', 'fat', 'protein', 'sodium']
+max_params = {}
+min_params = {}
+total = {}
+count = 0
+
+
+def init_total_params():
     total['kcal'] = 0
     total['carb'] = 0
     total['fat'] = 0
     total['protein'] = 0
     total['sodium'] = 0
 
-    while total['kcal'] <= max_params['kcal'] and total['carb'] <= max_params['kcal'] and total['fat'] <= max_params['fat'] and total['protein'] <= max_params['protein'] and total['sodium'] <= max_params['sodium']:
+
+def init_params():
+    max_params['kcal'] = max_kcal
+    max_params['carb'] = max_params['kcal'] * 0.5 / 4
+    max_params['fat'] = max_params['kcal'] * 0.3 / 9
+    max_params['protein'] = max_params['kcal'] * 0.2 / 4
+    max_params['sodium'] = max_sodium
+
+    min_params['kcal'] = max_kcal * min_pct
+    min_params['carb'] = min_params['kcal'] * 0.5 / 4
+    min_params['fat'] = min_params['kcal'] * 0.3 / 9
+    min_params['protein'] = min_params['kcal'] * 0.2 / 4
+    min_params['sodium'] = min_sodium
+
+    init_total_params()
+
+
+def break_check():
+    for k in keys_params:
+        if total[k] + kcal > max_params[k]:
+            break
+
+
+def inc_menu_key():
+    if k in menu.keys():
+        menu[k] = menu[k] + 1
+    else:
+        menu[k] = 1
+
+
+def params_under_max():
+    rc = True
+    for k in keys_params:
+        if total[k] > max_params[k]:
+            rc = False
+    return rc
+
+
+def params_in_min_max_window():
+    rc = True
+    for k in keys_params:
+        if total[k] < min_params[k] or total[k] > max_params[k]:
+            rc = False
+    return rc
+
+
+### MAIN ###
+init_params()
+
+while True:
+    menu = {}
+    init_total_params()
+
+    while params_under_max():
         k = random.choice(list(food.keys()))
         kcal = food[k]['kcal']
         carb = food[k]['carb']
@@ -74,16 +106,7 @@ while True:
             if menu[k] == max_servings:
                 continue
 
-        if total['kcal'] + kcal > max_params['kcal']:
-            break
-        if total['carb'] + carb > max_params['kcal']:
-            break
-        if total['fat'] + fat > max_params['fat']:
-            break
-        if total['protein'] + protein > max_params['protein']:
-            break
-        if total['sodium'] + kcal > max_params['sodium']:
-            break
+        break_check()
 
         total['kcal'] = total['kcal'] + kcal
         total['carb'] = total['carb'] + carb
@@ -91,15 +114,12 @@ while True:
         total['protein'] = total['protein'] + protein
         total['sodium'] = total['sodium'] + sodium
 
-        if k in menu.keys():
-            menu[k] = menu[k] + 1
-        else:
-            menu[k] = 1
+        inc_menu_key()
 
-        if total['kcal'] >= min_params['kcal'] and total['carb'] >= min_params['carb'] and total['fat'] >= min_params['fat'] and total['protein'] >= min_params['protein'] and total['kcal'] <= max_params['kcal'] and total['carb'] <= max_params['kcal'] and total['fat'] <= max_params['fat'] and total['protein'] <= max_params['protein'] and total['sodium'] <= max_params['sodium']:
+        if params_in_min_max_window():
             break
 
-    if total['kcal'] >= min_params['kcal'] and total['carb'] >= min_params['carb'] and total['fat'] >= min_params['fat'] and total['protein'] >= min_params['protein'] and total['kcal'] <= max_params['kcal'] and total['carb'] <= max_params['kcal'] and total['fat'] <= max_params['fat'] and total['protein'] <= max_params['protein'] and total['sodium'] <= max_params['sodium']:
+    if params_in_min_max_window():
         break
 
     count = count + 1
@@ -107,9 +127,9 @@ while True:
 
 
 print(f"Menu: {count} runs")
-print("%-33s kcal %4d, carb %3d, fat %3d, protein %3d, sodium %4d" %
+print("%-33s kcal %4d, carb %4d, fat %3d, protein %3d, sodium %4d" %
       ("Totals:", total['kcal'], total['carb'], total['fat'], total['protein'], total['sodium']))
-print("%-33s kcal %4d, carb %3d, fat %3d, protein %3d, sodium %4d" %
+print("%-33s kcal %4d, carb %4d, fat %3d, protein %3d, sodium %4d" %
       ("Maxs:", max_params['kcal'], max_params['kcal'], max_params['fat'], max_params['protein'], max_params['sodium']))
 print(88 * '-')
 for k in sorted(menu.keys()):
