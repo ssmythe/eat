@@ -60,6 +60,11 @@ def break_check():
             break
 
 
+def init_menu_key():
+    if not k in menu.keys():
+        menu[k] = 0
+
+
 def inc_menu_key():
     if k in menu.keys():
         menu[k] = menu[k] + 1
@@ -100,6 +105,9 @@ while True:
         sodium = food[k]['sodium']
         max_servings = food[k]['max_servings']
 
+        if max_servings == 0:
+            continue
+
         if k in menu.keys():
             if menu[k] == max_servings:
                 continue
@@ -138,5 +146,5 @@ for k in sorted(menu.keys()):
     protein = food[k]['protein'] * servings
     sodium = food[k]['sodium'] * servings
     check_boxes = servings * "[ ]"
-    print("%dx %-30s kcal %4d, carb %3d, fat %3d, protein %3d, sodium %4d  %s" %
+    print("%dx %-30s kcal %4d, carb %4d, fat %3d, protein %3d, sodium %4d  %s" %
           (servings, k, kcal, carb, fat, protein, sodium, check_boxes))
