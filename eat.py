@@ -8,6 +8,7 @@ import json
 
 
 # tuneables
+calc_menus = 7
 min_pct = 0.90
 max_kcal = 2000
 min_sodium = 500
@@ -92,59 +93,62 @@ def params_in_min_max_window():
 load_food_file()
 init_params()
 
-while True:
-    menu = {}
-    init_total_params()
+for i in range(1, calc_menus + 1):
+    while True:
+        menu = {}
+        init_total_params()
 
-    while params_under_max():
-        k = random.choice(list(food.keys()))
-        kcal = food[k]['kcal']
-        carb = food[k]['carb']
-        fat = food[k]['fat']
-        protein = food[k]['protein']
-        sodium = food[k]['sodium']
-        max_servings = food[k]['max_servings']
+        while params_under_max():
+            k = random.choice(list(food.keys()))
+            kcal = food[k]['kcal']
+            carb = food[k]['carb']
+            fat = food[k]['fat']
+            protein = food[k]['protein']
+            sodium = food[k]['sodium']
+            max_servings = food[k]['max_servings']
 
-        if max_servings == 0:
-            continue
-
-        if k in menu.keys():
-            if menu[k] == max_servings:
+            if max_servings == 0:
                 continue
 
-        break_check()
+            if k in menu.keys():
+                if menu[k] == max_servings:
+                    continue
 
-        total['kcal'] = total['kcal'] + kcal
-        total['carb'] = total['carb'] + carb
-        total['fat'] = total['fat'] + fat
-        total['protein'] = total['protein'] + protein
-        total['sodium'] = total['sodium'] + sodium
+            break_check()
 
-        inc_menu_key()
+            total['kcal'] = total['kcal'] + kcal
+            total['carb'] = total['carb'] + carb
+            total['fat'] = total['fat'] + fat
+            total['protein'] = total['protein'] + protein
+            total['sodium'] = total['sodium'] + sodium
+
+            inc_menu_key()
+
+            if params_in_min_max_window():
+                break
 
         if params_in_min_max_window():
             break
 
-    if params_in_min_max_window():
-        break
-
-    count = count + 1
-    print(count, end='\r')
+        count = count + 1
+        # print(count, end='\r')
 
 
-print(f"Menu: {count} runs")
-print("%-33s kcal %4d, carb %4d, fat %3d, protein %3d, sodium %4d" %
-      ("Totals:", total['kcal'], total['carb'], total['fat'], total['protein'], total['sodium']))
-print("%-33s kcal %4d, carb %4d, fat %3d, protein %3d, sodium %4d" %
-      ("Maxs:", max_params['kcal'], max_params['carb'], max_params['fat'], max_params['protein'], max_params['sodium']))
-print(88 * '-')
-for k in sorted(menu.keys()):
-    servings = menu[k]
-    kcal = food[k]['kcal'] * servings
-    carb = food[k]['carb'] * servings
-    fat = food[k]['fat'] * servings
-    protein = food[k]['protein'] * servings
-    sodium = food[k]['sodium'] * servings
-    check_boxes = servings * "[ ]"
-    print("%dx %-30s kcal %4d, carb %4d, fat %3d, protein %3d, sodium %4d  %s" %
-          (servings, k, kcal, carb, fat, protein, sodium, check_boxes))
+    print(f"Menu #{i}: {count} runs")
+    print("%-33s kcal %4d, carb %4d, fat %3d, protein %3d, sodium %4d" %
+        ("Totals:", total['kcal'], total['carb'], total['fat'], total['protein'], total['sodium']))
+    print("%-33s kcal %4d, carb %4d, fat %3d, protein %3d, sodium %4d" %
+        ("Maxs:", max_params['kcal'], max_params['carb'], max_params['fat'], max_params['protein'], max_params['sodium']))
+    print(88 * '-')
+    for k in sorted(menu.keys()):
+        servings = menu[k]
+        kcal = food[k]['kcal'] * servings
+        carb = food[k]['carb'] * servings
+        fat = food[k]['fat'] * servings
+        protein = food[k]['protein'] * servings
+        sodium = food[k]['sodium'] * servings
+        check_boxes = servings * "[ ]"
+        print("%dx %-30s kcal %4d, carb %4d, fat %3d, protein %3d, sodium %4d  %s" %
+            (servings, k, kcal, carb, fat, protein, sodium, check_boxes))
+
+    print()

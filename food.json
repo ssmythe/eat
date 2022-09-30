@@ -7,6 +7,14 @@
         "sodium": 0,
         "max_servings": 999
     },
+    "almonds 24pc": {
+        "kcal": 160,
+        "carb": 6,
+        "fat": 14,
+        "protein": 6,
+        "sodium": 0,
+        "max_servings": 999
+    },
     "amys vegetable pot pie": {
         "kcal": 440,
         "carb": 46,
@@ -15,13 +23,21 @@
         "sodium": 650,
         "max_servings": 999
     },
+    "banana": {
+        "kcal": 105,
+        "carb": 27,
+        "fat": 0,
+        "protein": 1,
+        "sodium": 1,
+        "max_servings": 2
+    },
     "honeycrisp apple": {
         "kcal": 80,
         "carb": 22,
         "fat": 0,
         "protein": 0,
         "sodium": 0,
-        "max_servings": 999
+        "max_servings": 2
     },
     "protein powder 0.5": {
         "kcal": 60,
@@ -37,7 +53,7 @@
         "fat": 3,
         "protein": 2,
         "sodium": 73,
-        "max_servings": 1
+        "max_servings": 0
     },
     "salad with vranch dressing": {
         "kcal": 177,
@@ -45,7 +61,7 @@
         "fat": 15,
         "protein": 2,
         "sodium": 143,
-        "max_servings": 1
+        "max_servings": 2
     },
     "special k and almond milk": {
         "kcal": 157,
@@ -71,6 +87,14 @@
         "sodium": 375,
         "max_servings": 999
     },
+    "toast with earth balance": {
+        "kcal": 180,
+        "carb": 15,
+        "fat": 12,
+        "protein": 5,
+        "sodium": 180,
+        "max_servings": 999
+    },
     "tofurky chao mayo sandwich": {
         "kcal": 389,
         "carb": 39,
@@ -85,7 +109,7 @@
         "fat": 0,
         "protein": 1,
         "sodium": 0,
-        "max_servings": 999
+        "max_servings": 1
     },
     "yukon gold potato": {
         "kcal": 110,
