@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
-# TODO read food from URL
-# TODO command line interface for number of menus to produce
+# TODO shoppling list
 
 import random
 import json
@@ -10,7 +9,7 @@ import json
 # tuneables
 calc_menus = 7
 min_pct = 0.90
-max_kcal = 2000
+max_kcal = 1697
 min_sodium = 500
 max_sodium = 2000
 food_file = "food.json"
@@ -139,7 +138,7 @@ for i in range(1, calc_menus + 1):
         ("Totals:", total['kcal'], total['carb'], total['fat'], total['protein'], total['sodium']))
     print("%-33s kcal %4d, carb %4d, fat %3d, protein %3d, sodium %4d" %
         ("Maxs:", max_params['kcal'], max_params['carb'], max_params['fat'], max_params['protein'], max_params['sodium']))
-    print(88 * '-')
+    print(89 * '-')
     for k in sorted(menu.keys()):
         servings = menu[k]
         kcal = food[k]['kcal'] * servings
