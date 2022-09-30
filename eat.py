@@ -70,6 +70,7 @@ def inc_menu_key():
     else:
         menu[k] = 1
 
+
 def inc_shopping_keys():
     for k in menu.keys():
         if k in shopping.keys():
