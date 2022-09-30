@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 
-# TODO shoppling list
-
 import random
 import json
 
@@ -20,6 +18,7 @@ keys_params = ['kcal', 'carb', 'fat', 'protein', 'sodium']
 max_params = {}
 min_params = {}
 total = {}
+shopping = {}
 count = 0
 
 
@@ -70,6 +69,13 @@ def inc_menu_key():
         menu[k] = menu[k] + 1
     else:
         menu[k] = 1
+
+def inc_shopping_keys():
+    for k in menu.keys():
+        if k in shopping.keys():
+            shopping[k] = shopping[k] + menu[k]
+        else:
+            shopping[k] = menu[k]
 
 
 def params_under_max():
@@ -132,12 +138,11 @@ for i in range(1, calc_menus + 1):
         count = count + 1
         # print(count, end='\r')
 
-
     print(f"Menu #{i}: {count} runs")
     print("%-33s kcal %4d, carb %4d, fat %3d, protein %3d, sodium %4d" %
-        ("Totals:", total['kcal'], total['carb'], total['fat'], total['protein'], total['sodium']))
+          ("Totals:", total['kcal'], total['carb'], total['fat'], total['protein'], total['sodium']))
     print("%-33s kcal %4d, carb %4d, fat %3d, protein %3d, sodium %4d" %
-        ("Maxs:", max_params['kcal'], max_params['carb'], max_params['fat'], max_params['protein'], max_params['sodium']))
+          ("Maxs:", max_params['kcal'], max_params['carb'], max_params['fat'], max_params['protein'], max_params['sodium']))
     print(89 * '-')
     for k in sorted(menu.keys()):
         servings = menu[k]
@@ -148,6 +153,22 @@ for i in range(1, calc_menus + 1):
         sodium = food[k]['sodium'] * servings
         check_boxes = servings * "[ ]"
         print("%dx %-30s kcal %4d, carb %4d, fat %3d, protein %3d, sodium %4d  %s" %
-            (servings, k, kcal, carb, fat, protein, sodium, check_boxes))
+              (servings, k, kcal, carb, fat, protein, sodium, check_boxes))
 
+    inc_shopping_keys()
     print()
+
+# Shopping List
+print()
+print()
+print(f"Shopping List:")
+print()
+for k in sorted(shopping.keys()):
+    servings = shopping[k]
+    kcal = food[k]['kcal'] * servings
+    carb = food[k]['carb'] * servings
+    fat = food[k]['fat'] * servings
+    protein = food[k]['protein'] * servings
+    sodium = food[k]['sodium'] * servings
+    check_boxes = servings * "[ ]"
+    print("%2dx %-30s  %s" % (servings, k, check_boxes))
