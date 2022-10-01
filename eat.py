@@ -154,10 +154,20 @@ for i in range(1, calc_menus + 1):
         # print(count, end='\r')
 
     print(f"Menu #{i}: {count} runs")
-    print("%-34s kcal %4d, carb %4d, fat %3d, protein %3d, sodium %4d" %
+    print("%-33s kcal %4d, carb %4d, fat %3d, protein %3d, sodium %4d" %
           ("Totals:", total['kcal'], total['carb'], total['fat'], total['protein'], total['sodium']))
-    print("%-34s kcal %4d, carb %4d, fat %3d, protein %3d, sodium %4d" %
+    print("%-33s kcal %4d, carb %4d, fat %3d, protein %3d, sodium %4d" %
           ("Maxs:", max_params['kcal'], max_params['carb'], max_params['fat'], max_params['protein'], max_params['sodium']))
+    print(90 * '-')
+    for k in sorted(menu.keys()):
+        servings = menu[k]
+        kcal = food[k]['kcal'] * servings
+        carb = food[k]['carb'] * servings
+        fat = food[k]['fat'] * servings
+        protein = food[k]['protein'] * servings
+        sodium = food[k]['sodium'] * servings
+        print("%dx %-30s kcal %4d, carb %4d, fat %3d, protein %3d, sodium %4d" %
+                (servings, k, kcal, carb, fat, protein, sodium))
     print(90 * '-')
     for k in sorted(menu.keys()):
         servings = menu[k]
@@ -167,8 +177,8 @@ for i in range(1, calc_menus + 1):
         protein = food[k]['protein']
         sodium = food[k]['sodium']
         for i in range(1, servings + 1):
-            print("[ ] %-30s kcal %4d, carb %4d, fat %3d, protein %3d, sodium %4d" %
-                  (k, kcal, carb, fat, protein, sodium))
+            print("[ ] %-30s" % (k))
+
 
     inc_shopping_keys()
     print()
