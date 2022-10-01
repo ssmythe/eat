@@ -105,7 +105,7 @@
         "protein": 12,
         "sodium": 375,
         "min_servings": 0,
-        "max_servings": 0
+        "max_servings": 999
     },
     "toast with earth balance": {
         "kcal": 180,
