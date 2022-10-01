@@ -15,7 +15,7 @@
         "protein": 6,
         "sodium": 0,
         "min_servings": 0,
-        "max_servings": 0
+        "max_servings": 3
     },
     "amys vegetable pot pie": {
         "kcal": 440,
@@ -33,7 +33,16 @@
         "protein": 1,
         "sodium": 1,
         "min_servings": 0,
-        "max_servings": 0
+        "max_servings": 1
+    },
+    "black beans and onions": {
+        "kcal": 123,
+        "carb": 32,
+        "fat": 1,
+        "protein": 11,
+        "sodium": 7,
+        "min_servings": 0,
+        "max_servings": 999
     },
     "honeycrisp apple": {
         "kcal": 80,
@@ -53,6 +62,24 @@
         "min_servings": 1,
         "max_servings": 1
     },
+    "chobani yogurt greek plain": {
+        "kcal": 90,
+        "carb": 6,
+        "fat": 0,
+        "protein": 16,
+        "sodium": 65,
+        "min_servings": 0,
+        "max_servings": 999
+    },
+    "just egg folded": {
+        "kcal": 100,
+        "carb": 3,
+        "fat": 7,
+        "protein": 7,
+        "sodium": 300,
+        "min_servings": 0,
+        "max_servings": 999
+    },
     "protein powder 0.5": {
         "kcal": 60,
         "carb": 2,
@@ -60,7 +87,16 @@
         "protein": 12,
         "sodium": 53,
         "min_servings": 0,
-        "max_servings": 999
+        "max_servings": 0
+    },
+    "salad": {
+        "kcal": 20,
+        "carb": 4,
+        "fat": 0,
+        "protein": 1,
+        "sodium": 15,
+        "min_servings": 0,
+        "max_servings": 2
     },
     "salad with anlvr dressing": {
         "kcal": 72,
@@ -69,7 +105,7 @@
         "protein": 2,
         "sodium": 73,
         "min_servings": 0,
-        "max_servings": 0
+        "max_servings": 2
     },
     "salad with vranch dressing": {
         "kcal": 157,
@@ -77,7 +113,7 @@
         "fat": 14,
         "protein": 2,
         "sodium": 143,
-        "min_servings": 1,
+        "min_servings": 0,
         "max_servings": 2
     },
     "special k and almond milk": {
@@ -88,6 +124,24 @@
         "sodium": 356,
         "min_servings": 0,
         "max_servings": 0
+    },
+    "bread/toast": {
+        "kcal": 80,
+        "carb": 15,
+        "fat": 1,
+        "protein": 5,
+        "sodium": 75,
+        "min_servings": 0,
+        "max_servings": 999
+    },
+    "toast with chao": {
+        "kcal": 140,
+        "carb": 19,
+        "fat": 6,
+        "protein": 5,
+        "sodium": 255,
+        "min_servings": 0,
+        "max_servings": 999
     },
     "toast with hummus": {
         "kcal": 150,
@@ -116,6 +170,15 @@
         "min_servings": 0,
         "max_servings": 999
     },
+    "tofurky chao mayo 0.5 sandwich": {
+        "kcal": 195,
+        "carb": 20,
+        "fat": 9,
+        "protein": 14,
+        "sodium": 389,
+        "min_servings": 0,
+        "max_servings": 999
+    },
     "tofurky chao mayo sandwich": {
         "kcal": 389,
         "carb": 39,
@@ -123,7 +186,7 @@
         "protein": 28,
         "sodium": 777,
         "min_servings": 0,
-        "max_servings": 0
+        "max_servings": 999
     },
     "yellow peach": {
         "kcal": 60,
@@ -132,7 +195,7 @@
         "protein": 1,
         "sodium": 0,
         "min_servings": 0,
-        "max_servings": 0
+        "max_servings": 1
     },
     "yukon gold potato": {
         "kcal": 110,
