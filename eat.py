@@ -177,7 +177,7 @@ for i in range(1, calc_menus + 1):
         protein = food[k]['protein']
         sodium = food[k]['sodium']
         for i in range(1, servings + 1):
-            print("[ ] %-30s" % (k))
+            print("[ ] %s" % (k))
 
 
     inc_shopping_keys()
