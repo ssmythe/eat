@@ -8,8 +8,8 @@ import json
 
 # tuneables
 calc_menus = 7
-min_pct = 0.90
-max_kcal = 1697
+min_kcal = 1600
+max_kcal = 1994
 min_sodium = 500
 max_sodium = 2000
 food_file = "food.json"
@@ -46,7 +46,7 @@ def init_params():
     max_params['protein'] = max_params['kcal'] * 0.2 / 4
     max_params['sodium'] = max_sodium
 
-    min_params['kcal'] = max_kcal * min_pct
+    min_params['kcal'] = min_kcal
     min_params['carb'] = min_params['kcal'] * 0.5 / 4
     min_params['fat'] = min_params['kcal'] * 0.3 / 9
     min_params['protein'] = min_params['kcal'] * 0.2 / 4
@@ -106,6 +106,18 @@ for i in range(1, calc_menus + 1):
         menu = {}
         init_total_params()
 
+        # minimum servings logic here
+        for k in food.keys():
+            min_servings = food[k]['min_servings']
+            if min_servings > 0:
+                kcal = food[k]['kcal'] * min_servings
+                carb = food[k]['carb'] * min_servings
+                fat = food[k]['fat'] * min_servings
+                protein = food[k]['protein'] * min_servings
+                sodium = food[k]['sodium'] * min_servings
+                max_servings = food[k]['max_servings']
+                menu[k] = min_servings
+
         while params_under_max():
             k = random.choice(list(food.keys()))
             kcal = food[k]['kcal']
@@ -162,7 +174,6 @@ for i in range(1, calc_menus + 1):
     print()
 
 # Shopping List
-print()
 print()
 print(f"Shopping List:")
 print()
