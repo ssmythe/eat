@@ -44,6 +44,15 @@
         "min_servings": 0,
         "max_servings": 2
     },
+    "centrum adults multivitamin": {
+        "kcal": 0,
+        "carb": 0,
+        "fat": 0,
+        "protein": 0,
+        "sodium": 0,
+        "min_servings": 1,
+        "max_servings": 1
+    },
     "protein powder 0.5": {
         "kcal": 60,
         "carb": 2,
