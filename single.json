@@ -1,0 +1,93 @@
+{
+  "almondmilk": {
+    "store": "Safeway",
+    "store product name": "Blue Diamond Almonds Almond Breeze Milk Unsweetened Original - 64 Fl. Oz.",
+    "serving size": "1 cup (240mL)",
+    "servings per container": 8,
+    "price": 4.99,
+    "carb": 1,
+    "fat": 2.5,
+    "protein": 1,
+    "sodium": 170,
+    "min_servings": 0,
+    "max_servings": 0
+  },
+  "almonds": {
+    "store": "Safeway",
+    "store product name": "Signature Farms Almonds Raw Unsalted - 16 Oz",
+    "serving size": "0.25 cup (28g)",
+    "servings per container": 16,
+    "price": 7.99,
+    "carb": 6,
+    "fat": 14,
+    "protein": 6,
+    "sodium": 0,
+    "min_servings": 0,
+    "max_servings": 0
+  },
+  "amys vegetable pot pie": {
+    "store": "Safeway",
+    "store product name": "Amy's Vegetable Pot Pie - 7.5 Oz",
+    "serving size": "1 bowl",
+    "servings per container": 1,
+    "price": 4.99,
+    "carb": 46,
+    "fat": 24,
+    "protein": 11,
+    "sodium": 650,
+    "min_servings": 0,
+    "max_servings": 0
+  },
+  "banana": {
+    "store": "Safeway",
+    "store product name": "Banana - Each",
+    "serving size": "5.2 oz (146.6g)",
+    "servings per container": 1,
+    "price": 0.31,
+    "carb": 33.7,
+    "fat": 0.5,
+    "protein": 1.6,
+    "sodium": 1.4,
+    "min_servings": 0,
+    "max_servings": 0
+  },
+  "honeycrisp apple": {
+    "store": "Safeway",
+    "store product name": "Honeycrisp Apple",
+    "serving size": "1 apple",
+    "servings per container": 1,
+    "price": 1.65,
+    "carb": 22,
+    "fat": 0,
+    "protein": 0,
+    "sodium": 0,
+    "min_servings": 0,
+    "max_servings": 2
+  },
+  "one a day multivitamin": {
+    "store": "Amazon",
+    "store product name": "ONE A DAY Men’s Natural Fruit Bites Multivitamin with Immune Health Support, Apple, 60 Count",
+    "serving size": "2 bites",
+    "servings per container": 30,
+    "price": 18.7,
+    "carb": 2,
+    "fat": 0,
+    "protein": 0,
+    "sodium": 0,
+    "min_servings": 1,
+    "max_servings": 1
+  },
+  "yellow peach": {
+    "store": "Safeway",
+    "store product name": "Yellow Peach",
+    "serving size": "1 peach",
+    "servings per container": 1,
+    "price": 1.5,
+    "carb": 15,
+    "fat": 0.5,
+    "protein": 1,
+    "sodium": 0,
+    "min_servings": 0,
+    "max_servings": 1
+  }
+}

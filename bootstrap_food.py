@@ -29,6 +29,10 @@ def load_food_file():
         food = json.load(file)
 
 
+# DEBUG: remove exit for first time run
+print("WARNING: please remove exit() the first time you run this!!!")
+exit(1)
+
 write_food_file()
 load_food_file()
 

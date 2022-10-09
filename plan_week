@@ -1,3 +1,9 @@
 #!/usr/bin/env bash
 
+rm -f food.json
+touch food.json
+python3 single_to_food.py
+python3 recipe_to_food.py
+./pretty_food
+
 ./eat.py | tee menus.txt

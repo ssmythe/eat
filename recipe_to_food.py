@@ -35,6 +35,11 @@ def load_recipe_file():
         recipe = json.load(file)
 
 
+def write_food_file():
+    with open(food_file, 'w') as file:
+        json.dump(food, file)
+
+
 def add_food_key(name, key, value):
     global food
 
@@ -59,11 +64,15 @@ for r in recipe.keys():
     # pp.pprint(recipe[r])
     servings = recipe[r]['servings']
     serving_size = recipe[r]['serving size']
+    min_servings = recipe[r]['min_servings']
+    max_servings = recipe[r]['max_servings']
 
     add_food_key(r, 'serving_size', serving_size)
     add_food_key(r, 'servings per container', servings)
     add_food_key(r, 'store', 'recipe')
     add_food_key(r, 'store product name', 'recipe')
+    add_food_key(r, 'min_servings', min_servings)
+    add_food_key(r, 'max_servings', max_servings)
 
     for i in recipe[r]['ingredients'].keys():
         # print(f"ingredient: {i}")
@@ -80,9 +89,9 @@ for r in recipe.keys():
         add_food_key(r, 'protein', protein)
         add_food_key(r, 'sodium', sodium)
         add_food_key(r, 'price', price)
-        add_food_key(r, 'min_servings', 0)
-        add_food_key(r, 'max_servings', 0)
 
-        print(f"food: {r}")
-        pp.pprint(food[r])
-        print()
+        # print(f"food: {r}")
+        # pp.pprint(food[r])
+        # print()
+
+write_food_file()
