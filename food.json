@@ -10,7 +10,7 @@
     "protein": 1,
     "sodium": 170,
     "min_servings": 0,
-    "max_servings": 0
+    "max_servings": 3
   },
   "almonds": {
     "store": "Safeway",
@@ -199,7 +199,7 @@
     "servings per container": 8,
     "store": "recipe",
     "store product name": "recipe",
-    "min_servings": 0,
+    "min_servings": 1,
     "max_servings": 1,
     "carb": 16.875,
     "fat": 0.5,
@@ -251,7 +251,7 @@
     "servings per container": 1,
     "store": "recipe",
     "store product name": "recipe",
-    "min_servings": 0,
+    "min_servings": 1,
     "max_servings": 999,
     "carb": 18,
     "fat": 7.5,

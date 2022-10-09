@@ -89,7 +89,7 @@
             "russet potato": 1,
             "yellow onion": 1
         },
-        "min_servings": 0,
+        "min_servings": 1,
         "max_servings": 1
     },
     "toast with chao": {
@@ -129,7 +129,7 @@
             "ezekiel bread": 1,
             "just egg folded": 1
         },
-        "min_servings": 0,
+        "min_servings": 1,
         "max_servings": 999
     },
     "tofurky chao mayo sandwich": {
