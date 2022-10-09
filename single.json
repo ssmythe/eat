@@ -49,7 +49,7 @@
     "protein": 1.6,
     "sodium": 1.4,
     "min_servings": 0,
-    "max_servings": 0
+    "max_servings": 1
   },
   "honeycrisp apple": {
     "store": "Safeway",

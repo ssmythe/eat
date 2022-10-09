@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+cp -f single.json food.json
+python3 recipe_to_food.py
+./pretty_food

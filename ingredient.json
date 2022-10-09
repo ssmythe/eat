@@ -1,4 +1,15 @@
 {
+  "almondmilk": {
+    "store": "Safeway",
+    "store product name": "Blue Diamond Almonds Almond Breeze Milk Unsweetened Original - 64 Fl. Oz.",
+    "serving size": "1 cup (240mL)",
+    "servings per container": 8,
+    "price": 4.99,
+    "carb": 1,
+    "fat": 2.5,
+    "protein": 1,
+    "sodium": 170
+  },
   "annies lite viniagrette raspberry": {
     "store": "Safeway",
     "store product name": "Annies Naturals Lite Vinaigrette Raspberry - 8 Fl. Oz.",
@@ -8,9 +19,7 @@
     "carb": 5,
     "fat": 3,
     "protein": 0,
-    "sodium": 55,
-    "min_servings": 0,
-    "max_servings": 0
+    "sodium": 55
   },
   "best foods vegan mayo": {
     "store": "Safeway",
@@ -21,9 +30,7 @@
     "carb": 1,
     "fat": 8,
     "protein": 0,
-    "sodium": 100,
-    "min_servings": 0,
-    "max_servings": 0
+    "sodium": 100
   },
   "black beans dry": {
     "store": "Safeway",
@@ -34,9 +41,7 @@
     "carb": 21,
     "fat": 1,
     "protein": 8,
-    "sodium": 5,
-    "min_servings": 0,
-    "max_servings": 0
+    "sodium": 5
   },
   "carrot": {
     "store": "Safeway",
@@ -47,9 +52,7 @@
     "carb": 7,
     "fat": 0,
     "protein": 1,
-    "sodium": 60,
-    "min_servings": 0,
-    "max_servings": 0
+    "sodium": 60
   },
   "chao slice": {
     "store": "Safeway",
@@ -60,9 +63,7 @@
     "carb": 4,
     "fat": 4.5,
     "protein": 0,
-    "sodium": 180,
-    "min_servings": 0,
-    "max_servings": 0
+    "sodium": 180
   },
   "chobani yogurt greek plain": {
     "store": "Safeway",
@@ -73,9 +74,18 @@
     "carb": 6,
     "fat": 0,
     "protein": 16,
-    "sodium": 65,
-    "min_servings": 0,
-    "max_servings": 0
+    "sodium": 65
+  },
+  "earth balance": {
+    "store": "Safeway",
+    "store product name": "Earth Balance Original Buttery Spread - 15 Oz",
+    "serving size": "1 Tbsp (14g)",
+    "servings per container": 30,
+    "price": 6.99,
+    "carb": 0,
+    "fat": 11,
+    "protein": 0,
+    "sodium": 105
   },
   "earthbound farm bag salad": {
     "store": "Safeway",
@@ -86,9 +96,7 @@
     "carb": 4,
     "fat": 0,
     "protein": 1,
-    "sodium": 15,
-    "min_servings": 0,
-    "max_servings": 0
+    "sodium": 15
   },
   "ezekiel bread": {
     "store": "Safeway",
@@ -99,9 +107,7 @@
     "carb": 15,
     "fat": 0.5,
     "protein": 5,
-    "sodium": 75,
-    "min_servings": 0,
-    "max_servings": 0
+    "sodium": 75
   },
   "green beans": {
     "store": "Safeway",
@@ -112,9 +118,7 @@
     "carb": 5,
     "fat": 0,
     "protein": 1,
-    "sodium": 0,
-    "min_servings": 0,
-    "max_servings": 0
+    "sodium": 0
   },
   "honey": {
     "store": "Safeway",
@@ -125,9 +129,7 @@
     "carb": 17.4,
     "fat": 0,
     "protein": 0.1,
-    "sodium": 0.8,
-    "min_servings": 0,
-    "max_servings": 0
+    "sodium": 0.8
   },
   "just egg folded": {
     "store": "Safeway",
@@ -138,9 +140,7 @@
     "carb": 3,
     "fat": 7,
     "protein": 7,
-    "sodium": 300,
-    "min_servings": 0,
-    "max_servings": 0
+    "sodium": 300
   },
   "ribeye steak": {
     "store": "Safeway",
@@ -151,9 +151,7 @@
     "carb": 0,
     "fat": 22,
     "protein": 28,
-    "sodium": 66,
-    "min_servings": 0,
-    "max_servings": 0
+    "sodium": 66
   },
   "russet potato": {
     "store": "Safeway",
@@ -164,9 +162,7 @@
     "carb": 26,
     "fat": 0,
     "protein": 3,
-    "sodium": 0,
-    "min_servings": 0,
-    "max_servings": 0
+    "sodium": 0
   },
   "sabra roasted red pepper hummus": {
     "store": "Safeway",
@@ -177,9 +173,7 @@
     "carb": 4,
     "fat": 5,
     "protein": 2,
-    "sodium": 125,
-    "min_servings": 0,
-    "max_servings": 0
+    "sodium": 125
   },
   "split peas dry": {
     "store": "Safeway",
@@ -190,9 +184,7 @@
     "carb": 21,
     "fat": 1,
     "protein": 8,
-    "sodium": 0,
-    "min_servings": 0,
-    "max_servings": 0
+    "sodium": 0
   },
   "special k cereal": {
     "store": "Safeway",
@@ -203,9 +195,7 @@
     "carb": 34,
     "fat": 3,
     "protein": 3,
-    "sodium": 250,
-    "min_servings": 0,
-    "max_servings": 0
+    "sodium": 250
   },
   "tofurkey deli slice hickory smoked": {
     "store": "Safeway",
@@ -216,9 +206,7 @@
     "carb": 5,
     "fat": 3.5,
     "protein": 14,
-    "sodium": 350,
-    "min_servings": 0,
-    "max_servings": 0
+    "sodium": 350
   },
   "vegan ranch dressing": {
     "store": "Safeway",
@@ -229,9 +217,7 @@
     "carb": 1,
     "fat": 15,
     "protein": 0,
-    "sodium": 125,
-    "min_servings": 0,
-    "max_servings": 0
+    "sodium": 125
   },
   "vegetable broth": {
     "store": "Safeway",
@@ -242,9 +228,7 @@
     "carb": 2,
     "fat": 0,
     "protein": 0,
-    "sodium": 130,
-    "min_servings": 0,
-    "max_servings": 0
+    "sodium": 130
   },
   "yellow onion": {
     "store": "Safeway",
@@ -255,8 +239,6 @@
     "carb": 11,
     "fat": 0,
     "protein": 1,
-    "sodium": 5,
-    "min_servings": 0,
-    "max_servings": 0
+    "sodium": 5
   }
 }

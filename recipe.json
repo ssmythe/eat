@@ -10,7 +10,7 @@
         "min_servings": 0,
         "max_servings": 1
     },
-    "chobani yogurt greek plain with honey": {
+    "chobani yogurt with honey": {
         "servings": 1,
         "serving size": "1 bowl (191.2g)",
         "ingredients": {
@@ -20,13 +20,32 @@
         "min_servings": 0,
         "max_servings": 2
     },
-    "green beans, onions, and garlic": {
+    "green beans": {
         "servings": 8,
         "serving size": "1 cup (236g)",
         "ingredients": {
             "vegetable broth": 4,
             "green beans": 13,
             "yellow onion": 1
+        },
+        "min_servings": 1,
+        "max_servings": 1
+    },
+    "ribeye steak": {
+        "servings": 1,
+        "serving size": "1 steak",
+        "ingredients": {
+            "ribeye steak": 1
+        },
+        "min_servings": 1,
+        "max_servings": 1
+    },
+    "potato with vbutter": {
+        "servings": 1,
+        "serving size": "1 steak",
+        "ingredients": {
+            "russet potato": 1,
+            "earth balance": 1
         },
         "min_servings": 1,
         "max_servings": 1
@@ -74,7 +93,7 @@
         "max_servings": 1
     },
     "toast with chao": {
-        "servings": 8,
+        "servings": 1,
         "serving size": "1 slice (? g)",
         "ingredients": {
             "ezekiel bread": 1,
@@ -84,17 +103,17 @@
         "max_servings": 999
     },
     "toast with earth balance": {
-        "servings": 8,
+        "servings": 1,
         "serving size": "1 slice (? g)",
         "ingredients": {
             "ezekiel bread": 1,
-            "chao slice": 1
+            "earth balance": 1
         },
         "min_servings": 0,
         "max_servings": 999
     },
     "toast with hummus": {
-        "servings": 8,
+        "servings": 1,
         "serving size": "1 slice (? g)",
         "ingredients": {
             "ezekiel bread": 1,
@@ -104,8 +123,8 @@
         "max_servings": 999
     },
     "toast with just egg": {
-        "servings": 8,
-        "serving size": "1 cup (236g)",
+        "servings": 1,
+        "serving size": "1 slice (? g)",
         "ingredients": {
             "ezekiel bread": 1,
             "just egg folded": 1
@@ -114,8 +133,8 @@
         "max_servings": 999
     },
     "tofurky chao mayo sandwich": {
-        "servings": 8,
-        "serving size": "1 cup (236g)",
+        "servings": 1,
+        "serving size": "1 sandwich",
         "ingredients": {
             "ezekiel bread": 1,
             "tofurkey deli slice hickory smoked": 1,
