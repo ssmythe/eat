@@ -101,7 +101,7 @@
     "fat": 1.625,
     "protein": 13.125,
     "sodium": 73.75,
-    "price": 5.14
+    "price": 0.82
   },
   "chobani yogurt with honey": {
     "serving_size": "1 bowl (191.2g)",
@@ -114,7 +114,7 @@
     "fat": 0,
     "protein": 16.1,
     "sodium": 65.8,
-    "price": 11.48
+    "price": 1.51
   },
   "green beans": {
     "serving_size": "1 cup (236g)",
@@ -127,7 +127,7 @@
     "fat": 0,
     "protein": 1.75,
     "sodium": 65.625,
-    "price": 6.7700000000000005
+    "price": 1.54
   },
   "ribeye steak": {
     "serving_size": "1 steak",
@@ -140,10 +140,10 @@
     "fat": 22,
     "protein": 28,
     "sodium": 66,
-    "price": 21.99
+    "price": 5.5
   },
   "potato with vbutter": {
-    "serving_size": "1 steak",
+    "serving_size": "1 potato",
     "servings per container": 1,
     "store": "recipe",
     "store product name": "recipe",
@@ -153,7 +153,7 @@
     "fat": 11,
     "protein": 3,
     "sodium": 105,
-    "price": 8.01
+    "price": 1.25
   },
   "salad with anlvr dressing": {
     "serving_size": "1 cup (236g)",
@@ -166,7 +166,7 @@
     "fat": 3,
     "protein": 1.75,
     "sodium": 81.25,
-    "price": 17.02
+    "price": 3.54
   },
   "salad with vranch dressing": {
     "serving_size": "1 cup (236g)",
@@ -179,7 +179,7 @@
     "fat": 15,
     "protein": 1.75,
     "sodium": 151.25,
-    "price": 14.22
+    "price": 2.96
   },
   "special k and almond milk": {
     "serving_size": "1 bowl",
@@ -192,7 +192,7 @@
     "fat": 5.5,
     "protein": 4,
     "sodium": 420,
-    "price": 9.98
+    "price": 1.17
   },
   "split pea soup": {
     "serving_size": "1 cup (236g)",
@@ -205,7 +205,7 @@
     "fat": 0.5,
     "protein": 4.75,
     "sodium": 15.625,
-    "price": 1.56
+    "price": 0.41000000000000003
   },
   "toast with chao": {
     "serving_size": "1 slice (? g)",
@@ -218,7 +218,7 @@
     "fat": 5,
     "protein": 5,
     "sodium": 255,
-    "price": 13.780000000000001
+    "price": 0.99
   },
   "toast with earth balance": {
     "serving_size": "1 slice (? g)",
@@ -231,7 +231,7 @@
     "fat": 11.5,
     "protein": 5,
     "sodium": 180,
-    "price": 14.780000000000001
+    "price": 0.62
   },
   "toast with hummus": {
     "serving_size": "1 slice (? g)",
@@ -244,7 +244,7 @@
     "fat": 5.5,
     "protein": 7,
     "sodium": 200,
-    "price": 15.780000000000001
+    "price": 0.86
   },
   "toast with just egg": {
     "serving_size": "1 slice (? g)",
@@ -257,7 +257,7 @@
     "fat": 7.5,
     "protein": 12,
     "sodium": 375,
-    "price": 13.780000000000001
+    "price": 1.8900000000000001
   },
   "tofurky chao mayo sandwich": {
     "serving_size": "1 sandwich",
@@ -270,6 +270,6 @@
     "fat": 16.5,
     "protein": 19,
     "sodium": 705,
-    "price": 22.760000000000005
+    "price": 2.12
   }
 }

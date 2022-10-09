@@ -78,11 +78,12 @@ for r in recipe.keys():
         # print(f"ingredient: {i}")
         # pp.pprint(ingredient[i])
         iqty = recipe[r]['ingredients'][i]
+        ispc = ingredient[i]['servings per container']
         carb = ingredient[i]['carb'] * iqty / servings
         fat = ingredient[i]['fat'] * iqty / servings
         protein = ingredient[i]['protein'] * iqty / servings
         sodium = ingredient[i]['sodium'] * iqty / servings
-        price = round(ingredient[i]['price'] * iqty / servings, 2)
+        price = round(ingredient[i]['price'] * iqty / ispc / servings, 2)
 
         add_food_key(r, 'carb', carb)
         add_food_key(r, 'fat', fat)
