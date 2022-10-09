@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# TODO recipes encapsulate items
+# TODO refactor shopping list for amounts used
 
 import random
 import json
