@@ -1,0 +1,104 @@
+{
+    "black beans and onions": {
+        "servings": 8,
+        "serving size": "1 cup (236g)",
+        "ingredients": {
+            "vegetable broth": 4,
+            "black beans dry": 13,
+            "yellow onion": 1
+        }
+    },
+    "chobani yogurt greek plain with honey": {
+        "servings": 1,
+        "serving size": "1 bowl (191.2g)",
+        "ingredients": {
+            "chobani yogurt greek plain": 1,
+            "honey": 1
+        }
+    },
+    "green beans, onions, and garlic": {
+        "servings": 8,
+        "serving size": "1 cup (236g)",
+        "ingredients": {
+            "vegetable broth": 4,
+            "green beans": 13,
+            "yellow onion": 1
+        }
+    },
+    "salad with anlvr dressing": {
+        "servings": 1,
+        "serving size": "1 cup (236g)",
+        "ingredients": {
+            "earthbound farm bag salad": 1.75,
+            "annies lite viniagrette raspberry": 1
+        }
+    },
+    "salad with vranch dressing": {
+        "servings": 1,
+        "serving size": "1 cup (236g)",
+        "ingredients": {
+            "earthbound farm bag salad": 1.75,
+            "vegan ranch dressing": 1
+        }
+    },
+    "special k and almond milk": {
+        "servings": 1,
+        "serving size": "1 bowl",
+        "ingredients": {
+            "special k cereal": 1,
+            "almondmilk": 1
+        }
+    },
+    "split pea soup": {
+        "servings": 8,
+        "serving size": "1 cup (236g)",
+        "ingredients": {
+            "split peas dry": 4,
+            "carrot": 2,
+            "russet potato": 1,
+            "yellow onion": 1
+        }
+    },
+    "toast with chao": {
+        "servings": 8,
+        "serving size": "1 slice (? g)",
+        "ingredients": {
+            "ezekiel bread": 1,
+            "chao slice": 1
+        }
+    },
+    "toast with earth balance": {
+        "servings": 8,
+        "serving size": "1 slice (? g)",
+        "ingredients": {
+            "ezekiel bread": 1,
+            "chao slice": 1
+        }
+    },
+    "toast with hummus": {
+        "servings": 8,
+        "serving size": "1 slice (? g)",
+        "ingredients": {
+            "ezekiel bread": 1,
+            "sabra roasted red pepper hummus": 1
+        }
+    },
+    "toast with just egg": {
+        "servings": 8,
+        "serving size": "1 cup (236g)",
+        "ingredients": {
+            "ezekiel bread": 1,
+            "just egg folded": 1
+        }
+    },
+    "tofurky chao mayo sandwich": {
+        "servings": 8,
+        "serving size": "1 cup (236g)",
+        "ingredients": {
+            "ezekiel bread": 1,
+            "tofurkey deli slice hickory smoked": 1,
+            "chao slice": 1,
+            "best foods vegan mayo": 1
+        }
+    }
+}

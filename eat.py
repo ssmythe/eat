@@ -30,6 +30,16 @@ def load_food_file():
     with open(food_file, 'r') as file:
         food = json.load(file)
 
+def calculate_kcal():
+    global food
+    for k in food.keys():
+        food[k]['kcal'] = 0
+        carb = food[k]['carb'] + 0
+        fat = food[k]['fat'] + 0
+        protein = food[k]['protein'] + 0
+        sodium = food[k]['sodium'] + 0
+        food[k]['kcal'] = carb * 4 + fat * 9 + protein * 4
+
 
 def init_total_params():
     total['kcal'] = 0
@@ -99,6 +109,7 @@ def params_in_min_max_window():
 
 ### MAIN ###
 load_food_file()
+calculate_kcal()
 init_params()
 
 for i in range(1, calc_menus + 1):

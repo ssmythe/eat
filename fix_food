@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-python3 ./fix_food_json.py
-jq . food.json | sponge food.json
