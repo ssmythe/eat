@@ -8,7 +8,7 @@ import json
 
 # tuneables
 calc_menus = 7
-min_kcal = 1550
+min_kcal = 1600
 max_kcal = 1638
 min_sodium = 500
 max_sodium = 2000
