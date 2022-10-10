@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 
-# TODO refactor shopping list for amounts used
-
 import random
 import json
 
