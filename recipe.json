@@ -28,8 +28,8 @@
             "green beans": 13,
             "yellow onion": 1
         },
-        "min_servings": 1,
-        "max_servings": 1
+        "min_servings": 0,
+        "max_servings": 0
     },
     "ribeye steak": {
         "servings": 1,
@@ -37,8 +37,8 @@
         "ingredients": {
             "ribeye steak": 1
         },
-        "min_servings": 1,
-        "max_servings": 1
+        "min_servings": 0,
+        "max_servings": 0
     },
     "potato with vbutter": {
         "servings": 1,

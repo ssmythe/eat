@@ -187,6 +187,7 @@ for i in range(1, calc_menus + 1):
               (servings, k, kcal, carb, fat, protein, sodium, price))
     print(98 * '-')
     for k in sorted(menu.keys()):
+        servings = menu[k]
         for i in range(1, servings + 1):
             print("[ ] %s" % (k))
 
