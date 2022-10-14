@@ -10,6 +10,15 @@
         "min_servings": 0,
         "max_servings": 1
     },
+    "chobani yogurt": {
+        "servings": 1,
+        "serving size": "1 bowl (191.2g)",
+        "ingredients": {
+            "chobani yogurt greek plain": 1
+        },
+        "min_servings": 0,
+        "max_servings": 0
+    },
     "chobani yogurt with honey": {
         "servings": 1,
         "serving size": "1 bowl (191.2g)",
